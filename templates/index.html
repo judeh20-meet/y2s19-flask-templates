@@ -2,10 +2,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 	<title></title>
 </head>
 <body>
-	<h1>puree batata</h1>
-	<p>LITERALLY BEST FOOD</p>
+	 <h1> Favorite Food!</h1>
+	    <p> My favorite foods are: </p>
+	    <h2> Food: </h2>
+	    <ul>
+	        {% for food in foods %}
+	        <li> {{food}} </li>
+	        {% endfor %}
+
 </body>
 </html>
