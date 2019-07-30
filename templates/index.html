@@ -9,10 +9,19 @@
 	 <h1> Favorite Food!</h1>
 	    <p> My favorite foods are: </p>
 	    <h2> Food: </h2>
+	    {% if opposite_day == False%}
 	    <ul>
 	        {% for food in foods %}
 	        <li> {{food}} </li>
 	        {% endfor %}
+	    {%else%}
+	    <ul>
+	    	{%for food in bad_foods%}
+	    	<li>{{food}}</li>
+	    	{% endfor %}
+	    	{% endif%}
+
+
 
 </body>
 </html>
